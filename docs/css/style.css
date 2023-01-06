@@ -284,6 +284,10 @@ main > div {
   visibility: hidden;
 }
 
+.header__inner > picture {
+  display: none;
+}
+
 /* Content */
 
 .content {
@@ -599,6 +603,10 @@ main > div {
   .menu {
     display: block;
   }
+
+  .header__inner > picture {
+    display: block;
+  }
 }
 
 @media (max-width: 610px) {
@@ -615,6 +623,10 @@ main > div {
 @media (max-width: 500px) {
   main {
     background: none;
+  }
+
+  .webp main {
+    background: none !important;
   }
 
   .container.mb_nopadding {
