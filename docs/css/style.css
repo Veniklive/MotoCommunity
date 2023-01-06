@@ -284,6 +284,10 @@ main > div {
   visibility: hidden;
 }
 
+.header__inner picture {
+  display: none;
+}
+
 /* Content */
 
 .content {
@@ -597,6 +601,10 @@ main > div {
   }
 
   .menu {
+    display: block;
+  }
+
+  .header__inner picture {
     display: block;
   }
 }
