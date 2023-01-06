@@ -284,7 +284,11 @@ main > div {
   visibility: hidden;
 }
 
+<<<<<<< HEAD
 .header__inner > picture {
+=======
+.header__inner picture {
+>>>>>>> 8efee2eefd2017cdd3b9041f9a5e5e581f1718d0
   display: none;
 }
 
@@ -604,7 +608,11 @@ main > div {
     display: block;
   }
 
+<<<<<<< HEAD
   .header__inner > picture {
+=======
+  .header__inner picture {
+>>>>>>> 8efee2eefd2017cdd3b9041f9a5e5e581f1718d0
     display: block;
   }
 }
