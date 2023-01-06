@@ -55,7 +55,7 @@ main{
 
 	&.mb_nopadding{
 		@media (max-width: 500px) {
-			padding: 0px 0px;
+			padding: 0px 0px !important;
 		}
 	}
 }
@@ -225,11 +225,8 @@ main>div{
 	}
 }
 
-<<<<<<< HEAD
+
 .header__inner>picture{
-=======
-.header__inner picture{
->>>>>>> 8efee2eefd2017cdd3b9041f9a5e5e581f1718d0
 	display: none;
 	@media (max-width: 768px) {
 		display: block;
@@ -413,9 +410,9 @@ main>div{
 		flex-wrap: wrap;
 	}
 	&__img{
-		border-radius: 20px;
-		width: 300px;
-		height: 200px;
+		border-radius: adptVal(20, 9);
+		width: adptVal(270, 100);
+		height: adptVal(180, 70);
 		margin: 20px 20px 20px 20px;
 		cursor: pointer;
 	}
