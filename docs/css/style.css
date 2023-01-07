@@ -353,8 +353,9 @@ main > div {
 }
 
 .about__img {
-  width: 150px;
-  height: 150px;
+  border-radius: calc(9px + 11 * ((100vw - 320px) / 960));
+  width: calc(180px + 90 * ((100vw - 320px) / 960));
+  height: calc(120px + 60 * ((100vw - 320px) / 960));
 }
 
 .about__separation {
@@ -392,9 +393,9 @@ main > div {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   gap: 15px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -406,9 +407,9 @@ main > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -430,7 +431,7 @@ main > div {
   color: white;
   font-family: "Inter";
   font-style: normal;
-  text-align: justify;
+  text-align: center;
 }
 
 /* Footer */
@@ -462,6 +463,8 @@ main > div {
 }
 
 .footer__text {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   font-size: 14px;
   font-weight: 100;
   color: #DE0F3F;
@@ -470,6 +473,8 @@ main > div {
 }
 
 .footer__logo {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -499,9 +504,9 @@ main > div {
 
 .gallery__img {
   border-radius: calc(9px + 11 * ((100vw - 320px) / 960));
-  width: calc(100px + 170 * ((100vw - 320px) / 960));
-  height: calc(70px + 110 * ((100vw - 320px) / 960));
-  margin: 20px 20px 20px 20px;
+  width: calc(135px + 135 * ((100vw - 320px) / 960));
+  height: calc(90px + 90 * ((100vw - 320px) / 960));
+  margin: calc(5px + 15 * ((100vw - 320px) / 960)) calc(5px + 15 * ((100vw - 320px) / 960)) calc(5px + 15 * ((100vw - 320px) / 960)) calc(5px + 15 * ((100vw - 320px) / 960));
   cursor: pointer;
 }
 

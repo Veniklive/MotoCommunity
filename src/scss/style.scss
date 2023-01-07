@@ -291,8 +291,9 @@ main>div{
 	}
 	
 	&__img{
-		width: 150px;
-		height: 150px;
+		border-radius: adptVal(20, 9);
+		width: adptVal(270, 180);
+		height: adptVal(180, 120);
 	}
 
 	&__separation{
@@ -319,7 +320,7 @@ main>div{
 		justify-content: space-evenly;
 		gap: 15px;
 
-		align-items: center;
+		align-items: flex-start;
 		flex-wrap: wrap;;
 
 		@media (max-width: 610px) {
@@ -337,7 +338,7 @@ main>div{
 	&__item{
 		flex: 0 1 20%;
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		flex-direction: column;
 		align-items: center;
 		gap: 5px;
@@ -354,7 +355,7 @@ main>div{
     	color: white;
     	font-family: 'Inter';
     	font-style: normal;
-		text-align: justify;
+		text-align: center;
 	}
 }
 
@@ -363,6 +364,7 @@ main>div{
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
+	
 
 	&>div{
 		height: 100%;
@@ -382,6 +384,7 @@ main>div{
 	}
 	
 	&__text{
+		align-self: flex-start;
 		font-size: 14px;
 		font-weight: 100;
 		color: #DE0F3F;
@@ -390,6 +393,7 @@ main>div{
 	}
 	
 	&__logo{
+		align-self: flex-end;
 		display: flex;
 		cursor: pointer;
 	}
@@ -411,9 +415,9 @@ main>div{
 	}
 	&__img{
 		border-radius: adptVal(20, 9);
-		width: adptVal(270, 100);
-		height: adptVal(180, 70);
-		margin: 20px 20px 20px 20px;
+		width: adptVal(270, 135);
+		height: adptVal(180, 90);
+		margin: adptVal(20, 5) adptVal(20, 5) adptVal(20, 5) adptVal(20, 5);;
 		cursor: pointer;
 	}
 	}
