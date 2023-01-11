@@ -1,10 +1,12 @@
 @import "nullstyle";
 @import "fonts";
 
-
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Inter+Tight:wght@800&family=Racing+Sans+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&family=Racing+Sans+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&family=Inter:wght@300&family=Racing+Sans+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 
 $maxWidth: 1280;//верхнее пиковое знач на ширине экрана 1280px
@@ -56,6 +58,7 @@ main{
 	&.mb_nopadding{
 		@media (max-width: 500px) {
 			padding: 0px 0px !important;
+			margin: 0px;
 		}
 	}
 }
@@ -244,10 +247,10 @@ main>div{
 	flex-direction: column;
 
 	&__title{
-		font-size: 19px;
+		font-size: 25px;
     	font-weight: 300;
     	color: #DE0F3F;
-    	font-family: 'Racing Sans One';
+    	font-family: 'Lobster';
     	font-style: normal;
 		padding-top: 25px;
 		padding-bottom: 25px;
@@ -378,9 +381,9 @@ main>div{
 		align-items: center;
 		height: 100%;
 		gap: 5px;
-		@media (max-width: 400px) {
+		/*@media (max-width: 400px) {
 			flex-direction: column;
-		}
+		}*/
 	}
 	
 	&__text{
@@ -390,6 +393,9 @@ main>div{
 		color: #DE0F3F;
 		font-family: 'Inter Tight';
 		font-style: normal;
+		@media (max-width: 402px) {
+			font-size: 13px;
+		}
 	}
 	
 	&__logo{
@@ -401,12 +407,20 @@ main>div{
 		margin-left: 10px;
 		width: 46px;
 		height: 46px;
+		@media (max-width: 402px) {
+			margin-left: adptVal(30, 5);
+			width: adptVal(170, 36);
+			height: adptVal(170, 36);
+		}
+		&.opened{
+			visibility: hidden;
+		}
 	}
 }
 
 /* Gallery */
 	
-   .gallery{
+.gallery{
 	&__row{
 		display: flex;
 		justify-content: space-around;
@@ -421,3 +435,192 @@ main>div{
 		cursor: pointer;
 	}
 	}
+
+/* Contacts */
+
+.contacts{
+	display: flex;
+	align-items: center;
+	gap: 30px;
+
+	box-sizing: border-box;
+	justify-content: space-between;
+	position: relative;
+    flex-wrap: wrap;
+    display: flex;
+
+	&__row{
+		display: flex;
+		justify-content: space-evenly;
+		gap: 15px;
+		width: 100%;
+
+		align-items: flex-start;
+		flex-wrap: wrap;;
+	}
+
+	&__item{
+		flex: 0 1 20%;
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+		align-items: center;
+		gap: 5px;
+	}
+
+	&__avatar{
+		width: 200px;
+		height: 200px;
+		border-radius: 15px;
+	}
+
+	&__text{
+    	font-weight: 300;
+    	color: white;
+		&__name{
+			font-family: 'Inter';
+    		font-style: normal;
+			text-align: center;
+			font-size: 18px;
+		}
+		&__position{
+			font-family: 'Inter';
+    		font-style: italic;
+			text-align: center;
+			color: rgb(202, 202, 202);
+			font-size: 16px;
+		}
+		&__email{
+			display: block;
+			font-family: 'Inter';
+    		font-style: normal;
+			text-align: center;
+			font-size: 16px;
+			color: white;
+		}
+		&__phone{
+			display: block;
+			font-family: 'Inter';
+    		font-style: normal;
+			text-align: center;
+			font-size: 16px;
+			color: white;
+		}
+	}
+}
+
+.social{
+	display: flex;
+	align-items: center;
+	gap: 30px;
+
+	box-sizing: border-box;
+	justify-content: center;
+	position: relative;
+    flex-wrap: wrap;
+    display: flex;
+
+	&__row{
+		display: flex;
+		justify-content: space-evenly;
+		gap: 15px;
+
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__item{
+		flex: 0 1 20%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		gap: 5px;
+	}
+
+	&__ico{
+		width: 100px;
+		height: 100px;
+	}
+
+	&__text{
+		font-size: 16px;
+    	font-weight: 500;
+    	color: white;
+    	font-family: 'Inter';
+    	font-style: normal;
+		text-align: center;
+	}
+}
+
+.contacts{
+	display: flex;
+	align-items: center;
+	gap: 30px;
+
+	box-sizing: border-box;
+	justify-content: space-between;
+	position: relative;
+    flex-wrap: wrap;
+    display: flex;
+
+	&__row{
+		display: flex;
+		justify-content: space-evenly;
+		gap: 15px;
+		width: 100%;
+
+		align-items: flex-start;
+		flex-wrap: wrap;;
+	}
+
+	&__item{
+		flex: 0 1 20%;
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+		align-items: center;
+		gap: 5px;
+	}
+
+	&__avatar{
+		width: 200px;
+		height: 200px;
+		border-radius: 15px;
+	}
+}
+
+.popup-scale-img{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.85);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+
+	&__body{
+		max-width: 800px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			border-radius: 15px;
+			max-width: 80%;
+			object-fit: contain;
+		}
+	}
+	/* Animation */
+	transition: all .5s ease-in-out;
+	opacity: 0;
+	visibility: hidden;
+	
+	&.opened{
+		opacity: 1;
+		visibility: visible;
+	}
+}

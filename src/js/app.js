@@ -1,3 +1,4 @@
+import { linefeed } from "gulp-util";
 import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.isWebp();
@@ -21,3 +22,20 @@ menuBlock.onclick = function(event){
         document.querySelector(".menu").classList.remove("opened");
     }, {once:true});
 };
+
+const openIMG = document.querySelectorAll(".gallery__img");
+
+/*openIMG.forEach(img => {
+    img.addEventListener("click", function(event){
+        event.stopPropagation();
+        document.querySelector(".popup-scale-img").classList.add("opened");
+        let target = event.target;
+        if (target.classList.contains("gallery__img")) {
+            console.log(target.src);
+            let popapsImg = document.querySelector(".popup-scale-img__body img")
+        }
+    
+        wrapper.addEventListener("click", function(){
+            document.querySelector(".popup-scale-img").classList.remove("opened");
+        }, {once:true})});
+});*/
