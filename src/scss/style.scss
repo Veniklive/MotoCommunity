@@ -614,6 +614,7 @@ main>div{
 			object-fit: contain;
 		}
 	}
+	
 	/* Animation */
 	transition: all .5s ease-in-out;
 	opacity: 0;
@@ -622,5 +623,57 @@ main>div{
 	&.opened{
 		opacity: 1;
 		visibility: visible;
+	}
+}
+
+.courses{
+
+	&__body{
+		border-style: solid;
+		border-radius: 25px;
+		border-width: 3px;
+		border-color: #A01212;
+		padding: 0px 15px 15px 15px;
+	}
+	&__title{
+
+	}
+	&__choice{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 15px;
+		@media (max-width: 750px) {
+			display: grid;
+			justify-items: center;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+		}
+
+	}
+	&__options{
+		position: relative;
+		border-radius: 15px;
+		overflow: hidden;
+		cursor: pointer;
+		h4{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.65);
+			color: white;
+			font-family: "Inter";
+		}
+		img{
+			max-width: 100%;
+			@media (max-width: 750px) {
+				max-height: 200px;
+			}
+		}
 	}
 }

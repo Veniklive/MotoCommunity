@@ -1,4 +1,3 @@
-import { linefeed } from "gulp-util";
 import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.isWebp();
@@ -25,17 +24,19 @@ menuBlock.onclick = function(event){
 
 const openIMG = document.querySelectorAll(".gallery__img");
 
-/*openIMG.forEach(img => {
-    img.addEventListener("click", function(event){
-        event.stopPropagation();
-        document.querySelector(".popup-scale-img").classList.add("opened");
-        let target = event.target;
-        if (target.classList.contains("gallery__img")) {
-            console.log(target.src);
-            let popapsImg = document.querySelector(".popup-scale-img__body img")
-        }
-    
-        wrapper.addEventListener("click", function(){
-            document.querySelector(".popup-scale-img").classList.remove("opened");
-        }, {once:true})});
-});*/
+const galleryRow = document.querySelector('.gallery__row');
+const scaleImgPopup = document.querySelector(".popup-scale-img");
+
+galleryRow.addEventListener('click', (event) => {
+    let target = event.target;
+
+    if (target.classList.contains("gallery__img")) {
+        let popupsImg = document.querySelector(".popup-scale-img__body img");
+        popupsImg.src = target.src;
+        scaleImgPopup.classList.add("opened");//activate Popup
+    };
+});
+
+scaleImgPopup.addEventListener("click", function () {
+    document.querySelector(".popup-scale-img").classList.remove("opened");
+});
