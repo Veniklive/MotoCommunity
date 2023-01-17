@@ -620,6 +620,12 @@ main>div{
 			grid-template-rows: 1fr 1fr;
 		}
 
+
+		input {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			display: none;}
 	}
 
 	&__options{
@@ -627,6 +633,19 @@ main>div{
 		border-radius: 15px;
 		overflow: hidden;
 		cursor: pointer;
+		border-style:solid;
+		border-width: 3px;
+		border-color: rgba(0, 0, 0, 0);
+
+		&.selected{
+			border-color: green;
+			h4,h1{
+				transition: all .5s ease-in-out;
+				text-shadow: 5px 5px 5px black;
+				background-color: rgba(0, 0, 0, 0.35);
+			}
+		}
+
 		h4{
 			display: flex;
 			justify-content: center;
@@ -664,17 +683,66 @@ main>div{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
 			input{
+				max-width: 90%;
 				background-color: #5A5A5A;
 				display: flex;
 				color: white;
+				border-color: #A01212;
 				padding: 10px;
+				border-style: solid;
+				border-width: 2px;
 				border-radius: 15px;
 				font-size: 20px;
 				font-weight:600;
 				font-family: "Inter";
 				text-align: center;
+				@media (max-width: 380px) {
+					max-width: 240px;
+				}
 			}
 	}
+}
+.courses__phone{
+	&.valid{
+		border-color: green;
+	}
+	&.invalid{
+		border-color: #DE0F3F;
+	}
+}
+
+.button{
+	line-height: 60px;
+	display: inline-block;
+	cursor: pointer;
+	text-transform: uppercase;
+	padding: 0px 30px;
+	font-size: 18px;
+	border-radius: 25px;
+	background-color:#A01212;
+	color: white;
+
+	position: relative;
+	overflow: hidden;
+
+	transition: all 1.5s ease 0s;
+}
+.button span{
+	position:relative;
+	z-index: 2;
+	font-family: 'Inter Tight';
+    font-style: normal;
+	text-align: center;
+}
+.button:hover{
+	color: black;
+	background-color: green;
+}
+.button:hover:before{
+	transition: scale(1);
+	-webkit-transition: scale(1);
+	-moz-transtion: scale(1);
+	-ms-transition: scale(1);
+	-o-transition: scale(1);
 }

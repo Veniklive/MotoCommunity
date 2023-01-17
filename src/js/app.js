@@ -1,5 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
-
+import { gallery } from "./modules/gallery.js";
+import { courses } from "./modules/courses.js";
+import { number } from "./modules/number.js";
 flsFunctions.isWebp();
 
 /*
@@ -7,6 +9,8 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 const swiper = new Swiper();
 */
 
+
+//MAIN
 const menuBlock = document.querySelector(".menu");
 const wrapper = document.querySelector(".wrapper");
 
@@ -22,21 +26,17 @@ menuBlock.onclick = function(event){
     }, {once:true});
 };
 
-const openIMG = document.querySelectorAll(".gallery__img");
+//GALLERY
+if (document.querySelector(".gallery")) {
+    gallery();
+};
 
-const galleryRow = document.querySelector('.gallery__row');
-const scaleImgPopup = document.querySelector(".popup-scale-img");
+//RADIO
+if (document.querySelector(".courses")) {
+    courses();
+};
 
-galleryRow.addEventListener('click', (event) => {
-    let target = event.target;
-
-    if (target.classList.contains("gallery__img")) {
-        let popupsImg = document.querySelector(".popup-scale-img__body img");
-        popupsImg.src = target.src;
-        scaleImgPopup.classList.add("opened");//activate Popup
-    };
-});
-
-scaleImgPopup.addEventListener("click", function () {
-    document.querySelector(".popup-scale-img").classList.remove("opened");
-});
+//NUMBER
+if (document.querySelector(".courses")) {
+    number();
+};

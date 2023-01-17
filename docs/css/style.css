@@ -782,11 +782,34 @@ main > div {
   gap: 15px;
 }
 
+.courses__choice input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: none;
+}
+
 .courses__options {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.courses__options.selected {
+  border-color: green;
+}
+
+.courses__options.selected h4,
+.courses__options.selected h1 {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  text-shadow: 5px 5px 5px black;
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .courses__options h4 {
@@ -846,17 +869,67 @@ main > div {
 }
 
 .courses__blockInput input {
+  max-width: 90%;
   background-color: #5A5A5A;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: white;
+  border-color: #A01212;
   padding: 10px;
+  border-style: solid;
+  border-width: 2px;
   border-radius: 15px;
   font-size: 20px;
   font-weight: 600;
   font-family: "Inter";
   text-align: center;
+}
+
+.courses__phone.valid {
+  border-color: green;
+}
+
+.courses__phone.invalid {
+  border-color: #DE0F3F;
+}
+
+.button {
+  line-height: 60px;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0px 30px;
+  font-size: 18px;
+  border-radius: 25px;
+  background-color: #A01212;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 1.5s ease 0s;
+  -o-transition: all 1.5s ease 0s;
+  transition: all 1.5s ease 0s;
+}
+
+.button span {
+  position: relative;
+  z-index: 2;
+  font-family: "Inter Tight";
+  font-style: normal;
+  text-align: center;
+}
+
+.button:hover {
+  color: black;
+  background-color: green;
+}
+
+.button:hover:before {
+  transition: scale(1);
+  -webkit-transition: scale(1);
+  -moz-transtion: scale(1);
+  -ms-transition: scale(1);
+  -o-transition: scale(1);
 }
 
 @media (max-width: 900px) {
@@ -1014,6 +1087,12 @@ main > div {
     margin-left: calc(5px + 25 * ((100vw - 320px) / 960));
     width: calc(36px + 134 * ((100vw - 320px) / 960));
     height: calc(36px + 134 * ((100vw - 320px) / 960));
+  }
+}
+
+@media (max-width: 380px) {
+  .courses__blockInput input {
+    max-width: 240px;
   }
 }
 

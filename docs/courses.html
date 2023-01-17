@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230115154236">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230117122933">
 
 	<link type="image/x-icon" href="./img/favicon.png" rel="shortcut icon">
 	<link type="Image/x-icon" href="./img/favicon.png" rel="icon">
@@ -47,69 +47,108 @@
 					<div class="courses__body">
 						<div class="content__title">Оберіть мотоцикл</div>
 						<div class="courses__choice">
-							<div class="courses__options">
+
+							<label for="motoChoice1">
+							<div class="courses__options moto-options">
+								<input type="radio" id="motoChoice1" name="Мотоцикл" value="KTM 250">
 								<h4>KTM 250</h4>
 								<picture><source srcset="./img/KTM_250.webp" type="image/webp"><img src="./img/KTM_250.jpg"></picture>
-							</div>
-							<div class="courses__options">
+							</div></label>
+
+							<label for="motoChoice2">
+							<div class="courses__options moto-options">
+								<input type="radio" id="motoChoice2" name="Мотоцикл" value="KTM 400">
 								<h4>KTM 400</h4>
 								<picture><source srcset="./img/KTM_400.webp" type="image/webp"><img src="./img/KTM_400.jpg"></picture>
-							</div>
-							<div class="courses__options">
+							</div></label>
+
+							<label for="motoChoice3">
+							<div class="courses__options moto-options">
+								<input type="radio" id="motoChoice3" name="Мотоцикл" value="Honda 250">
 								<h4>Honda 250</h4>
 								<picture><source srcset="./img/Honda_250.webp" type="image/webp"><img src="./img/Honda_250.jpg"></picture>
-							</div>
-							<div class="courses__options">
+							</div></label>
+
+							<label for="motoChoice4">
+							<div class="courses__options moto-options">
+								<input type="radio" id="motoChoice4" name="Мотоцикл" value="Yamaha 1000">
 								<h4>Yamaha 1000</h4>
 								<picture><source srcset="./img/Yamaha_1000.webp" type="image/webp"><img src="./img/Yamaha_1000.jpg"></picture>
-							</div>
+							</div></label>
+
 						</div>
 					</div>
 					<div class="courses__body">
 						<div class="content__title">Оберіть місце</div>
 						<div class="courses__choice">
-							<div class="courses__options">
+
+							<label for="placeChoice1">
+							<div class="courses__options place-options">
+								<input type="radio" id="placeChoice1" name="Місце" value="Майданчик">
 								<h4>Майданчик</h4>
 								<picture><source srcset="./img/майданчик.webp" type="image/webp"><img src="./img/майданчик.jpg"></picture>
-							</div>
-							<div class="courses__options">
+							</div></label>
+
+							<label for="placeChoice2">
+							<div class="courses__options place-options">
+								<input type="radio" id="placeChoice2" name="Місце" value="Картодром">
 								<h4>Картодром</h4>
 								<picture><source srcset="./img/картодром.webp" type="image/webp"><img src="./img/картодром.jpg"></picture>
-							</div>
-							<div class="courses__options">
+							</div></label>
+
+							<label for="placeChoice3">
+							<div class="courses__options place-options">
+								<input type="radio" id="placeChoice3" name="Місце" value="Трек">
 								<h4>Трек</h4>
 								<picture><source srcset="./img/трек.webp" type="image/webp"><img src="./img/трек.jpg"></picture>
-							</div>
+							</div></label>
+
 						</div>
 					</div>
 					<div class="courses__body">
 						<div class="content__title">Оберіть кількість занять</div>
 						<div class="courses__choice">
-							<div class="courses__options">
+
+							<label for="numberChoice1">
+							<div class="courses__options number-options">
+								<input type="radio" id="numberChoice1" name="кількість занять" value="5">
 								<h1>5</h1>
 								<picture><source srcset="./img/white.webp" type="image/webp"><img src="./img/white.jpg"></picture>
-							</div>
-							<div class="courses__options">
+							</div></label>
+
+							<label for="numberChoice2">
+							<div class="courses__options number-options">
+								<input type="radio" id="numberChoice2" name="кількість занять" value="10">
 								<h1>10</h1>
 								<picture><source srcset="./img/white.webp" type="image/webp"><img src="./img/white.jpg"></picture>
-							</div>
-							<div class="courses__options">
+							</div></label>
+
+							<label for="numberChoice3">
+							<div class="courses__options number-options">
+								<input type="radio" id="numberChoice3" name="кількість занять" value="15">
 								<h1>15</h1>
 								<picture><source srcset="./img/white.webp" type="image/webp"><img src="./img/white.jpg"></picture>
-							</div>
-							<div class="courses__options">
+							</div></label>
+
+							<label for="numberChoice4">
+							<div class="courses__options number-options">
+								<input type="radio" id="numberChoice4" name="кількість занять" value="20">
 								<h1>20</h1>
 								<picture><source srcset="./img/white.webp" type="image/webp"><img src="./img/white.jpg"></picture>
-							</div>
+							</div></label>
+
 						</div>
 					</div>
 					<div class="courses__body">
 						<div class="content__title">Введіть номер телефону</div>
 							<div class="courses__options">
 								<div class="courses__blockInput">
-								<input type="number" maxlength="12" class="courses__phone" placeholder="380YYXXXXXXX" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+								<input type="number" maxlength="12" class="courses__phone" placeholder="380YYXXXXXXX">
 								</div>
 						</div>
+					</div>
+					<div>
+						<button class="button" type="submit"><span>Відправити заяву</span></button>
 					</div>
 				</div>
 			</div>
@@ -131,7 +170,7 @@
     </div>
 </footer>
 	</div>
-	<script src="js/app.min.js?_v=20230115154236"></script>
+	<script src="js/app.min.js?_v=20230117122933"></script>
 </body>
 
 </html>
