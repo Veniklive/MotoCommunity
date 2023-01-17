@@ -601,6 +601,7 @@ main>div{
 
 	gap: 15px;
 	&__body{
+		width: 100%;
 		border-style: solid;
 		border-radius: 25px;
 		border-width: 3px;
@@ -701,6 +702,16 @@ main>div{
 					max-width: 240px;
 				}
 			}
+	}
+	&__sum{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: green;
+		font-size: 20px;
+		font-weight:600;
+		font-family: "Inter";
+		cursor: default;
 	}
 }
 .courses__phone{

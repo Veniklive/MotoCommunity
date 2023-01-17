@@ -14,6 +14,7 @@
 						<div class="about__text">Згідно з обраних пунктів та ваших навичок, тренер створить для вас індивідуальну навчальну програму. Після заказу курса протягом однієї доби, наш тренер подзвонить вам та домовиться о заняттях.</div>
 					</div>
 				</div>
+				<form action="#" method="post">
 				<div class="courses">
 					<div class="courses__body">
 						<div class="content__title">Оберіть мотоцикл</div>
@@ -21,28 +22,28 @@
 
 							<label for="motoChoice1">
 							<div class="courses__options moto-options">
-								<input type="radio" id="motoChoice1" name="Мотоцикл" value="KTM 250">
+								<input type="radio" class="motoPrice" id="motoChoice1" name="Мотоцикл" value="KTM 250" price="100">
 								<h4>KTM 250</h4>
 								<img src="./img/KTM_250.jpg">
 							</div></label>
 
 							<label for="motoChoice2">
 							<div class="courses__options moto-options">
-								<input type="radio" id="motoChoice2" name="Мотоцикл" value="KTM 400">
+								<input type="radio" class="motoPrice" id="motoChoice2" name="Мотоцикл" value="KTM 400" price="150">
 								<h4>KTM 400</h4>
 								<img src="./img/KTM_400.jpg">
 							</div></label>
 
 							<label for="motoChoice3">
 							<div class="courses__options moto-options">
-								<input type="radio" id="motoChoice3" name="Мотоцикл" value="Honda 250">
+								<input type="radio" class="motoPrice" id="motoChoice3" name="Мотоцикл" value="Honda 250" price="150">
 								<h4>Honda 250</h4>
 								<img src="./img/Honda_250.jpg">
 							</div></label>
 
 							<label for="motoChoice4">
 							<div class="courses__options moto-options">
-								<input type="radio" id="motoChoice4" name="Мотоцикл" value="Yamaha 1000">
+								<input type="radio" class="motoPrice" id="motoChoice4" name="Мотоцикл" value="Yamaha 1000" price="200">
 								<h4>Yamaha 1000</h4>
 								<img src="./img/Yamaha_1000.jpg">
 							</div></label>
@@ -55,21 +56,21 @@
 
 							<label for="placeChoice1">
 							<div class="courses__options place-options">
-								<input type="radio" id="placeChoice1" name="Місце" value="Майданчик">
+								<input type="radio" class="placePrice" id="placeChoice1" name="Місце" value="Майданчик" price="50">
 								<h4>Майданчик</h4>
 								<img src="./img/майданчик.jpg">
 							</div></label>
 
 							<label for="placeChoice2">
 							<div class="courses__options place-options">
-								<input type="radio" id="placeChoice2" name="Місце" value="Картодром">
+								<input type="radio" class="placePrice" id="placeChoice2" name="Місце" value="Картодром" price="75">
 								<h4>Картодром</h4>
 								<img src="./img/картодром.jpg">
 							</div></label>
 
 							<label for="placeChoice3">
 							<div class="courses__options place-options">
-								<input type="radio" id="placeChoice3" name="Місце" value="Трек">
+								<input type="radio" class="placePrice" id="placeChoice3" name="Місце" value="Трек" price="100">
 								<h4>Трек</h4>
 								<img src="./img/трек.jpg">
 							</div></label>
@@ -82,28 +83,28 @@
 
 							<label for="numberChoice1">
 							<div class="courses__options number-options">
-								<input type="radio" id="numberChoice1" name="кількість занять" value="5">
+								<input type="radio" class="numberPrice" id="numberChoice1" name="кількість занять" value="5" price="5">
 								<h1>5</h1>
 								<img src="./img/white.jpg">
 							</div></label>
 
 							<label for="numberChoice2">
 							<div class="courses__options number-options">
-								<input type="radio" id="numberChoice2" name="кількість занять" value="10">
+								<input type="radio" class="numberPrice" id="numberChoice2" name="кількість занять" value="10" price="10">
 								<h1>10</h1>
 								<img src="./img/white.jpg">
 							</div></label>
 
 							<label for="numberChoice3">
 							<div class="courses__options number-options">
-								<input type="radio" id="numberChoice3" name="кількість занять" value="15">
+								<input type="radio"  class="numberPrice" id="numberChoice3" name="кількість занять" value="15" price="15">
 								<h1>15</h1>
 								<img src="./img/white.jpg">
 							</div></label>
 
 							<label for="numberChoice4">
 							<div class="courses__options number-options">
-								<input type="radio" id="numberChoice4" name="кількість занять" value="20">
+								<input type="radio"  class="numberPrice" id="numberChoice4" name="кількість занять" value="20" price="20">
 								<h1>20</h1>
 								<img src="./img/white.jpg">
 							</div></label>
@@ -118,10 +119,17 @@
 								</div>
 						</div>
 					</div>
+					<div class="courses__body">
+						<div class="content__title">Приблизна вартість:</div>
+								<div class="courses__sum">
+						
+								</div>
+					</div>
 					<div>
 						<button class="button" type="submit"><span>Відправити заяву</span></button>
 					</div>
 				</div>
+				</form>
 			</div>
 		</div>
 	</main>

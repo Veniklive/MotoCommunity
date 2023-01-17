@@ -2,6 +2,7 @@ import * as flsFunctions from "./modules/functions.js";
 import { gallery } from "./modules/gallery.js";
 import { courses } from "./modules/courses.js";
 import { number } from "./modules/number.js";
+import { price } from "./modules/price.js";
 flsFunctions.isWebp();
 
 /*
@@ -39,4 +40,9 @@ if (document.querySelector(".courses")) {
 //NUMBER
 if (document.querySelector(".courses")) {
     number();
+};
+
+//PRICE
+if (document.querySelector(".courses")) {
+    price();
 };
